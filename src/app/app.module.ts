@@ -11,12 +11,21 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import { AuthService } from './login/auth.service';
+import { MenuComponent } from './menu/menu.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { ToolbarComponent } from './menu/toolbar/toolbar.component';
+import { DrawerComponent } from './menu/drawer/drawer.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    MenuComponent,
+    ToolbarComponent,
+    DrawerComponent,
+    
   ],
   imports: [
     BrowserModule,    
@@ -25,7 +34,10 @@ import { AuthService } from './login/auth.service';
     MatFormFieldModule,
     MatIconModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatToolbarModule,
+    MatSidenavModule
+    
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from './auth.service';
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -23,7 +24,6 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(email: string, password: string){
-
-    console.log(email, password);
+    this.authService.login(email, password);
   }
 }
