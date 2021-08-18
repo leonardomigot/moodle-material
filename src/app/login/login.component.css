@@ -1,0 +1,17 @@
+.vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+}
+
+.coln {
+  display: flex;
+  flex-direction: column;
+}
+
+.example-form {
+  margin: 30px;
+  min-width: 450px;
+}
