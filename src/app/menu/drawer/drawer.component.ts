@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { Observable, Observer } from 'rxjs';
+import { ActionService } from '../action.service';
 
 @Component({
   selector: 'app-drawer',
@@ -7,11 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DrawerComponent implements OnInit {
 
+  @ViewChild('drawer')drawer: any;
 
-
-  constructor() { }
+  constructor(
+    private actionService: ActionService
+  ) { 
+    actionService.temp.subscribe(value => {
+      this.drawer.toggle()
+    })
+  }
 
   ngOnInit(): void {
   }
+
 
 }

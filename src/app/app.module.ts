@@ -16,6 +16,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { ToolbarComponent } from './menu/toolbar/toolbar.component';
 import { DrawerComponent } from './menu/drawer/drawer.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatSelectModule} from '@angular/material/select';
+import { ContentComponent } from './menu/content/content.component';
 
 
 @NgModule({
@@ -25,6 +27,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     MenuComponent,
     ToolbarComponent,
     DrawerComponent,
+    ContentComponent,
     
   ],
   imports: [
@@ -36,7 +39,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     MatInputModule,
     MatButtonModule,
     MatToolbarModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatSelectModule
     
   ],
   providers: [AuthService],
