@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ControllerService } from 'src/app/controller/controller.service';
 
 @Component({
   selector: 'app-content',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContentComponent implements OnInit {
 
-  constructor() { }
+  materias: string[] = [];
+
+  constructor(
+    private controllerService: ControllerService
+  ) { }
 
   ngOnInit(): void {
+    this.materias = this.controllerService.getMaterias();
   }
+
+
 
 }

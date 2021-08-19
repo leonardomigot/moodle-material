@@ -9,7 +9,9 @@ export class ControllerService {
 
   constructor() { }
 
-  
+  getMaterias(): string[] {
+    return ['um', 'dois', 'tres'];
+  }
 
 
 }

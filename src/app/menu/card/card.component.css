@@ -1,0 +1,26 @@
+.card {
+  margin: 20px;
+  padding-bottom: 5px;
+  display: block;
+  width: min-content;
+  background-color: white;
+  height: min-content;
+  border: solid 1px rgba(0,0,0,.12)  
+}
+
+.card a {
+  text-decoration: none;
+  color: initial;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.card a:hover {
+  color: gray;
+}
+
+.spaced {
+  height: 150px;
+  width: 200px;
+  background-color: silver;
+}

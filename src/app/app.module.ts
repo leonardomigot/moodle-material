@@ -18,7 +18,7 @@ import { DrawerComponent } from './menu/drawer/drawer.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatSelectModule} from '@angular/material/select';
 import { ContentComponent } from './menu/content/content.component';
-
+import { CardComponent } from './menu/card/card.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +28,9 @@ import { ContentComponent } from './menu/content/content.component';
     ToolbarComponent,
     DrawerComponent,
     ContentComponent,
+    CardComponent,
+    
+    
     
   ],
   imports: [
