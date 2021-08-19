@@ -19,6 +19,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatSelectModule} from '@angular/material/select';
 import { ContentComponent } from './menu/content/content.component';
 import { CardComponent } from './menu/card/card.component';
+import { SubmenuComponent } from './submenu/submenu.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { CardComponent } from './menu/card/card.component';
     DrawerComponent,
     ContentComponent,
     CardComponent,
+    SubmenuComponent,
     
     
     
