@@ -13,25 +13,21 @@ export class ControllerService {
   constructor(
     private authService: AuthService
   ) { 
-    // this.userId = authService.currentId();
-    this.userId = 1;
-  }
-
-  getMaterias(): string[] {    
-
-    return ['um','dois'];
+    this.userId = authService.currentId();
+    // sessionStorage
+    
   }
 
   getMat2() {
 
     let temp = PESSOA_MATERIA_SEMESTRE.filter( item => item.idPessoa === this.userId );
     
-    let temp2 = temp.filter( item => item.idSemeste === 1 );
+    let temp2 = temp.filter( item => item.idSemestre === 1 );
 
     let temp3: number[] = [];
 
     temp2.forEach(item => {
-      temp3.push(item.idMateria)
+      temp3.push(item.idMateria)      
     });
 
     let temp4: string[] = [];
@@ -39,7 +35,7 @@ export class ControllerService {
     for(let i=0; i < temp3.length; i++){
       temp4.push(MATERIAS[i].subName)
     }   
-
+    
     return temp4;
     
     };

@@ -22,6 +22,7 @@ export class AuthService {
     }
     this.isLogged = true;
     this.userId = temp.id;
+    sessionStorage.setItem('isLogged', 'true');
     this.router.navigate([`menu/${temp.id}`]);
   }
 

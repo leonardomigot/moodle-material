@@ -8,15 +8,16 @@ import { AuthService } from '../login/auth.service';
 })
 export class MenuComponent implements OnInit {
 
-  isLogged = true;
+  isLogged = false;
 
   constructor(
     private authService: AuthService
   ) { }
 
   ngOnInit(): void {
-    // this.isLogged = this.authService.validation();
-
+    if (sessionStorage.getItem('isLogged')){
+      this.isLogged = true;
+    }
   }
 
 }

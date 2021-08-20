@@ -8,5 +8,9 @@ export const MATERIAS: Materia[] = [
   {
     id: 2,
     subName: 'Biologia'
+  },
+  {
+    id: 3,
+    subName: 'Administração'
   }
 ];
