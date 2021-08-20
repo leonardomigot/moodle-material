@@ -15,7 +15,7 @@ export class ContentComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.materias = this.controllerService.getMaterias();
+    this.materias = (this.controllerService.getMat2());
   }
 
 

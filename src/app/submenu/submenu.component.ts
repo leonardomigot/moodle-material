@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ControllerService } from '../controller/controller.service';
 
 @Component({
   selector: 'app-submenu',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SubmenuComponent implements OnInit {
 
-  constructor() { }
+  object: any;
+
+  constructor(
+    private controllerService: ControllerService
+  ) {
+      this.object = controllerService.getMat2();
+    }
 
   ngOnInit(): void {
   }
+
+
+
+
 
 }

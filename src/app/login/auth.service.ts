@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 export class AuthService {
 
   isLogged: boolean = false;  
+  userId: number = 0;
 
   constructor(private router: Router) { }
 
@@ -20,10 +21,15 @@ export class AuthService {
       throw new Error("Senha errada");
     }
     this.isLogged = true;
+    this.userId = temp.id;
     this.router.navigate([`menu/${temp.id}`]);
   }
 
   validation(): boolean {
     return this.isLogged;
+  }
+
+  currentId(): number {
+    return this.userId;
   }
 }
