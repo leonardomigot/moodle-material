@@ -8,7 +8,8 @@ import { SubmenuComponent } from './submenu/submenu.component';
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'menu/:id', component: MenuComponent},
-  { path: 'submenu', component: SubmenuComponent }
+  { path: 'submenu/:id', component: SubmenuComponent },
+  { path: '', redirectTo: 'login', pathMatch: 'full'}
 ];
 
 @NgModule({

@@ -32,14 +32,19 @@ export class ControllerService {
 
     let temp4: string[] = [];
 
+    let temp5: string[] = [];
+
     for(let i=0; i < temp3.length; i++){
-      temp4.push(MATERIAS[i].subName)
+      temp4.push( MATERIAS[i].subName )
+      temp5.push( temp3[i].toString() );
     }   
+
     
-    return temp4;
     
-    };
-        
+    return [temp4, temp5];
+    
+    };     
+ 
   
 
 
