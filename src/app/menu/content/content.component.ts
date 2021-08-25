@@ -19,6 +19,7 @@ export class ContentComponent implements OnInit {
 
   ngOnInit(): void {
     [this.materias, this.subIds] = this.controllerService.getMat2();
+    
   }
 
 

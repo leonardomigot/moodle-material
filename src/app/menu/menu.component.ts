@@ -8,15 +8,17 @@ import { AuthService } from '../login/auth.service';
 })
 export class MenuComponent implements OnInit {
 
-  isLogged = false;
+  isLogged: number = 0;
 
   constructor(
     private authService: AuthService
   ) { }
 
   ngOnInit(): void {
-    if (sessionStorage.getItem('isLogged')){
-      this.isLogged = true;
+    if (sessionStorage.getItem('isLogged') != undefined){
+      let temp = JSON.parse(sessionStorage.getItem('isLogged') || '{}');
+      
+      this.isLogged = parseInt(temp);
     }
   }
 

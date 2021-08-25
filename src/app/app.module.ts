@@ -21,6 +21,7 @@ import { ContentComponent } from './menu/content/content.component';
 import { CardComponent } from './menu/card/card.component';
 import { SubmenuComponent } from './submenu/submenu.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

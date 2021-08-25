@@ -15,6 +15,7 @@ export class ControllerService {
   ) { 
     this.userId = authService.currentId();
     // sessionStorage
+    console.log(this.userId);
     
   }
 

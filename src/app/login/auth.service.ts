@@ -7,10 +7,15 @@ import { Router } from '@angular/router';
 })
 export class AuthService {
 
-  isLogged: boolean = false;  
+  // isLogged: boolean = false;  
   userId: number = 0;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {
+    if (sessionStorage.getItem('isLogged') != undefined){
+      let temp = JSON.parse(sessionStorage.getItem('isLogged') || '{}');
+      this.userId = temp;
+    }
+   }
 
   login(email: string, password: string) {
     let temp = PESSOAS.find(pessoa => pessoa.email === email);
@@ -20,15 +25,12 @@ export class AuthService {
     if (temp.password !== password){
       throw new Error("Senha errada");
     }
-    this.isLogged = true;
     this.userId = temp.id;
-    sessionStorage.setItem('isLogged', 'true');
+    sessionStorage.setItem('isLogged', JSON.stringify(this.userId));
     this.router.navigate([`menu/${temp.id}`]);
   }
 
-  validation(): boolean {
-    return this.isLogged;
-  }
+
 
   currentId(): number {
     return this.userId;
